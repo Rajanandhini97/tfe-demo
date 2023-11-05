@@ -1,5 +1,6 @@
 #local tfe directory
-.terraform/*
+.terraform.*
+.terraform
 
 #tfe state files
 *.tfstate

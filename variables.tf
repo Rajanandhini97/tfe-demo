@@ -4,13 +4,14 @@ variable "vpc_cidr_block" {
 
 variable "subnet_cidr_block" {
     description = "Subnet CIDR block"
-    default = "10.0.0.0/24"
 }
 
-variable "environment" {
-    description = "Environment name"
-    type = list(object({
-        env_name = string
-        subscription = string
-    }))
-}
+variable availablity_zone {}
+
+variable env_prefix {}
+
+variable "my_ip" {}
+
+variable "instance_type" {}
+
+variable "public_key_location" {}
