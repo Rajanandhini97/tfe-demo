@@ -8,3 +8,6 @@
 
 #variables 
 *.tfvars
+
+#logs
+crash.log
