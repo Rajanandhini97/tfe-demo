@@ -13,7 +13,7 @@ resource "aws_vpc" "my-app-vpc" {
 resource "aws_subnet" "my-app-subnet" {
     vpc_id = aws_vpc.my-app-vpc.id
     cidr_block = var.subnet_cidr_block
-    availability_zone = var.availablity_zone
+    availability_zone = var.availability_zone
     
     tags = {
         Name: "${var.env_prefix}-subnet"
@@ -119,7 +119,7 @@ resource "aws_instance" "myapp-server" {
 
   subnet_id = aws_subnet.my-app-subnet.id
   vpc_security_group_ids = [ aws_default_security_group.default-sg.id ]
-  availability_zone = var.availablity_zone
+  availability_zone = var.availability_zone
 
   associate_public_ip_address = true
   key_name = aws_key_pair.ssh-key.key_name

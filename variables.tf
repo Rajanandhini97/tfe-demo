@@ -6,7 +6,11 @@ variable "subnet_cidr_block" {
     description = "Subnet CIDR block"
 }
 
-variable availablity_zone {}
+variable availability_zone {}
+
+variable "image_name" {
+  
+}
 
 variable env_prefix {}
 
